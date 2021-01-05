@@ -1,6 +1,7 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Abp.BlazorWebPrerendering.Blazor
 {
@@ -9,6 +10,8 @@ namespace Abp.BlazorWebPrerendering.Blazor
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
+
 
             var application = builder.AddApplication<BlazorWebPrerenderingBlazorModule>(options =>
             {

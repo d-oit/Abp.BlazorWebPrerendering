@@ -23,18 +23,23 @@
 
 <body class="abp-application-layout bg-light">
     <div id="ApplicationContainer">
-        @if (!HttpContext.Request.Path.StartsWithSegments("/authentication"))
+        @if (!HttpContext.Request.Path.StartsWithSegments("/authentication") || !HttpContext.Request.Path.StartsWithSegments("/register"))
         {
+            <p>wasm</p>
             <component type="typeof(Abp.BlazorWebPrerendering.Blazor.App)"
                        render-mode="Static" />
+            
         }
         else
         {
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
+           
+
         }
+
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
     </div>
 
     <!--ABP:Scripts-->

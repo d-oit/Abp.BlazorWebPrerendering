@@ -73,13 +73,13 @@ namespace Abp.BlazorWebPrerendering
 
         private void ConfigureBundles()
         {
-            Configure<AbpBundlingOptions>(options =>
-            {
-                options.StyleBundles.Configure(
-                    BasicThemeBundles.Styles.Global,
-                    bundle => { bundle.AddFiles("/global-styles.css"); }
-                );
-            });
+            //Configure<AbpBundlingOptions>(options =>
+            //{
+            //    options.StyleBundles.Configure(
+            //        BasicThemeBundles.Styles.Global,
+            //        bundle => { bundle.AddFiles("/global-styles.css"); }
+            //    );
+            //});
         }
 
         private void ConfigureUrls(IConfiguration configuration)

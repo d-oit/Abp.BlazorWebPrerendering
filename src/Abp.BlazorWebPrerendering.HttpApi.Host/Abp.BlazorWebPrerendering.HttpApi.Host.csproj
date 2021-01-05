@@ -33,9 +33,17 @@
 
   <ItemGroup>
     <Compile Remove="Logs\**" />
+    <Compile Remove="Pages\Account\**" />
+    <Compile Remove="Themes\**" />
     <Content Remove="Logs\**" />
+    <Content Remove="Pages\Account\**" />
+    <Content Remove="Themes\**" />
     <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="Pages\Account\**" />
+    <EmbeddedResource Remove="Themes\**" />
     <None Remove="Logs\**" />
+    <None Remove="Pages\Account\**" />
+    <None Remove="Themes\**" />
   </ItemGroup>
 
 </Project>
